@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    //Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="text-center">
+        <h1 class="display-4">Welcome to Widget Corporation</h1>
+        <p>We’re committed to creating products that defy convention, and inspire our customers with pride and trust. In fact, we guarantee every product we sell. If you’re not 100 percent happy with your purchase, you can return it during the first 60 days, no questions asked.</p>
+        <p><a href="@Url.Action("Index", "Products")" class="btn btn-primary btn-lg">Our Products</a></p>
+    </div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>About Us</h2>
+        <p>About us.....</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Our Philosophy</h2>
+        <p>Our Philosophy....</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>People</h2>
+        <p>Our Team.....</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>
