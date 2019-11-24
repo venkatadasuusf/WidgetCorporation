@@ -3,9 +3,9 @@ using WidgetCorporation.Models;
 
 namespace WidgetCorporation.Data
 {
-    public class WidgetCorporationDBContext : DbContext
+    public class ApplicationDbContext : DbContext
     {
-        public WidgetCorporationDBContext(DbContextOptions<WidgetCorporationDBContext> options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }

@@ -13,8 +13,8 @@ namespace WidgetCorporation.Models
         [Column(TypeName = "int")]
         public int CartID { get; set; }
 
-        //[ForeignKey] 
-        [Column(TypeName = "int")]
+        [ForeignKey("Customer")]
         public int CustomerID { get; set; }
+        public virtual Customer Customer { get; set; }
     }
 }

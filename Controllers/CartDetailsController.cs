@@ -12,9 +12,9 @@ namespace WidgetCorporation.Controllers
 {
     public class CartDetailsController : Controller
     {
-        private readonly WidgetCorporationDBContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public CartDetailsController(WidgetCorporationDBContext context)
+        public CartDetailsController(ApplicationDbContext context)
         {
             _context = context;
         }

@@ -13,7 +13,7 @@ namespace WidgetCorporation.Models
         [Key]
         [Column(TypeName = "int")]
         public int LoginSeqID { get; set; }
-
+        
         //[ForeignKey] 
         [Column(TypeName = "int")]
         public int CustomerID { get; set; }
@@ -23,5 +23,7 @@ namespace WidgetCorporation.Models
 
         [Column(TypeName = "nvarchar(100)")]
         public string Password { get; set; }
+        public virtual Customer Customer { get; set; }
+
     }
 }

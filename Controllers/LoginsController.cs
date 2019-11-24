@@ -12,9 +12,9 @@ namespace WidgetCorporation.Controllers
 {
     public class LoginsController : Controller
     {
-        private readonly WidgetCorporationDBContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public LoginsController(WidgetCorporationDBContext context)
+        public LoginsController(ApplicationDbContext context)
         {
             _context = context;
         }

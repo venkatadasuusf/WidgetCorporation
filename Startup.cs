@@ -26,7 +26,7 @@ namespace WidgetCorporation
         {
             services.AddControllersWithViews();
 
-            services.AddDbContext<WidgetCorporationDBContext>(options =>
+            services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("WidgetCorporationDBContext")));
 
         }

@@ -9,6 +9,7 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+
 <table class="table">
     <thead>
         <tr>
@@ -25,7 +26,7 @@
                 @Html.DisplayNameFor(model => model.ProductInventory)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ProductImageName)
+                Product Image
             </th>
             <th></th>
         </tr>
@@ -46,7 +47,9 @@
                 @Html.DisplayFor(modelItem => item.ProductInventory)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ProductImageName)
+                <a href="#">
+                    <img src="~/Content/Images/Products/1.jpg">
+                </a>
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.ProductID">Edit</a> |

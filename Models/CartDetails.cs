@@ -17,11 +17,15 @@ namespace WidgetCorporation.Models
         [Column(TypeName = "int")]
         public int CartID { get; set; }
 
+        //[ForeignKey]
         [Column(TypeName = "int")]
         public int ProductID { get; set; }
 
         [Column(TypeName = "int")]
         public int ProductQuantity { get; set; }
+
+        public virtual Product Product { get; set; }
+        public virtual Cart Cart { get; set; }
 
     }
 }

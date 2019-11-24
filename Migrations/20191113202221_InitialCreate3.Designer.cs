@@ -9,8 +9,8 @@ using WidgetCorporation.Data;
 namespace WidgetCorporation.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20191105164227_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20191113202221_InitialCreate3")]
+    partial class InitialCreate3
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -52,6 +52,10 @@ namespace WidgetCorporation.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("CartDetSeqID");
+
+                    b.HasIndex("CartID");
+
+                    b.HasIndex("ProductID");
 
                     b.ToTable("CartDetails");
                 });
@@ -110,6 +114,8 @@ namespace WidgetCorporation.Migrations
 
                     b.HasKey("LoginSeqID");
 
+                    b.HasIndex("CustomerID");
+
                     b.ToTable("Login");
                 });
 
@@ -138,6 +144,30 @@ namespace WidgetCorporation.Migrations
                     b.HasKey("ProductID");
 
                     b.ToTable("Product");
+                });
+
+            modelBuilder.Entity("WidgetCorporation.Models.CartDetails", b =>
+                {
+                    b.HasOne("WidgetCorporation.Models.Cart", "Cart")
+                        .WithMany()
+                        .HasForeignKey("CartID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("WidgetCorporation.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("WidgetCorporation.Models.Login", b =>
+                {
+                    b.HasOne("WidgetCorporation.Models.Customer", "Customer")
+                        .WithMany()
+                        .HasForeignKey("CustomerID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
